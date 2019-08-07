@@ -1,6 +1,8 @@
 	/*
 	 * Returns all possible Cliques of the given adjacency matrix of a graph
 	 * as subarrays in the return array.
+	 * Input: Adjacency Matrix of a graph G
+	 * Output: All possible cliques as an array of subarrays containing the node numbers.
 	 */
 	std::vector<std::vector<int>> CLIQUE(std::vector<std::vector<int>>adjacencyMatrix) {
 
@@ -75,4 +77,42 @@
 	}
 		    /* End of CLIQUE Algorithm.*/
 			return cl3;
+}
+
+
+
+int main(int argc, char** argv) {
+
+
+	// EXAMPLE INPUT: Adjacency Matrix (lines 1 - 20)
+
+	std::vector<int> l1 = {0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+	std::vector<int> l2 = {1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+	std::vector<int> l3 = {1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+	std::vector<int> l4 = {1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+	std::vector<int> l5 = {1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+	std::vector<int> l6 = {1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+	std::vector<int> l7 = {1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1};
+	std::vector<int> l8 = {1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1};
+	std::vector<int> l9 = {1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1};
+	std::vector<int> l10= {1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1};
+	std::vector<int> l11= {1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1};
+	std::vector<int> l12= {1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1};
+	std::vector<int> l13= {1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1};
+	std::vector<int> l14= {1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1};
+	std::vector<int> l15= {1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1};
+	std::vector<int> l16= {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1};
+	std::vector<int> l17= {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1};
+	std::vector<int> l18= {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1};
+	std::vector<int> l19= {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1};
+	std::vector<int> l20= {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0};
+	
+
+
+	std::vector<std::vector<int>> adj = {l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16, l17, l18, l19, l20};
+
+	// compute
+	std::vector<std::vector<int>> cls = CLIQUE(adj);
+
+	return 0;
 }
