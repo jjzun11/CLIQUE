@@ -1,7 +1,8 @@
 /*
  * Returns all possible Cliques of the given adjacency matrix of a graph
  * as subarrays in the return array.
- * Acceptable average runtime
+ * It has acceptable average runtime, of course worst-case runtime is exponential.
+ * (@author: Jan Lügering)
  */
 std::vector<std::vector<int>> CLIQUE(std::vector<std::vector<int>>adjacencyMatrix) {
 
